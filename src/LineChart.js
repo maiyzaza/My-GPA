@@ -3,18 +3,18 @@ import { Line } from "react-chartjs-2";
 import { Chart, registerables } from 'chart.js';
 Chart.register(...registerables);
 
-function LineChart({ semData }) {
+function LineChart({ semesterData }) {
 
-    var sem = []
+    var semester = []
     var gpa = []
 
-    semData.forEach((v) => {
-        sem.push(v[0])
+    semesterData.forEach((v) => {
+        semester.push(v[0])
         gpa.push(v[1])
     })
 
     const graphData = {
-        labels: sem,
+        labels: semester,
         datasets: [
             {
                 label: 'GPA' ,
