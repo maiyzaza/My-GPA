@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
 import { Container, Row, Col, Table, Button } from "react-bootstrap";
 import { FaTrash } from 'react-icons/fa';
-import LineChart from './LineChart';
+
+
 
 var semesterGPA = []
 var semesterGPA2 = []
 var semesterGPA3 = []
 
 function GPATable({ data, setDataItems, courseData }) {
-
     const [dataRows, setDataRows] = useState();
     const [totalGrade, settotalGrade] = useState(0);
 
@@ -165,10 +165,6 @@ function GPATable({ data, setDataItems, courseData }) {
         <Col>
           <Button onClick={clearData} variant="dark">Clear</Button>
         </Col>
-        <br />
-        <Row>
-          <LineChart semData={semesterGPA3}/>
-        </Row>
       </Container>
     )
 }
